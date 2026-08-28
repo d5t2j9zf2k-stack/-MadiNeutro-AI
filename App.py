@@ -924,323 +924,121 @@ st.markdown("""
 <style>
 
 .dev-card {
-    max-width: 760px;
-    margin: 40px auto;
-    padding: 40px 30px;
-    border-radius: 28px;
-    background: linear-gradient(
-        135deg,
-        #0f172a 0%,
-        #172554 45%,
-        #1d4ed8 75%,
-        #2563eb 100%
-    );
+    max-width: 700px;
+    margin: auto;
+    margin-top: 40px;
+    padding: 35px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #0f172a, #1e40af, #2563eb);
     color: white;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+    box-shadow: 0 12px 35px rgba(0,0,0,.35);
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow: hidden;
 }
 
 .avatar {
-    width: 105px;
-    height: 105px;
-    margin: 0 auto 20px auto;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.95);
+    margin: auto;
+    background: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 52px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    font-size: 50px;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.2);
 }
 
 .name-ar {
-    font-size: 31px;
-    font-weight: 800;
-    margin-bottom: 3px;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 5px;
 }
 
 .name-en {
-    font-size: 19px;
-    font-weight: 500;
-    opacity: 0.9;
+    font-size: 22px;
+    font-weight: 600;
+    opacity: 0.95;
     margin-bottom: 10px;
 }
 
 .title {
     font-size: 16px;
-    opacity: 0.9;
-    margin-bottom: 20px;
+    opacity: .9;
+    margin-bottom: 15px;
 }
 
 .badge {
     display: inline-block;
-    padding: 9px 20px;
+    padding: 8px 18px;
     background: white;
-    color: #1d4ed8;
+    color: #1e40af;
     border-radius: 40px;
-    font-weight: 700;
+    font-weight: bold;
     margin-bottom: 25px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-}
-
-.project-description {
-    background: rgba(255,255,255,0.10);
-    padding: 20px;
-    border-radius: 18px;
-    margin-bottom: 25px;
-    line-height: 1.6;
-    backdrop-filter: blur(6px);
-}
-
-.project-title {
-    font-size: 21px;
-    font-weight: 800;
-    margin-bottom: 8px;
-}
-
-.project-subtitle {
-    font-size: 14px;
-    opacity: 0.9;
-}
-
-.tech-container {
-    margin: 20px 0;
-}
-
-.tech {
-    display: inline-block;
-    background: rgba(255,255,255,0.15);
-    padding: 7px 13px;
-    border-radius: 30px;
-    margin: 4px;
-    font-size: 13px;
-    border: 1px solid rgba(255,255,255,0.15);
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 15px;
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
 .box {
-    background: rgba(255,255,255,0.12);
-    padding: 20px 12px;
-    border-radius: 17px;
-    backdrop-filter: blur(6px);
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.box:hover {
-    transform: translateY(-5px);
-    background: rgba(255,255,255,0.20);
-}
-
-.box-icon {
-    font-size: 27px;
-    margin-bottom: 6px;
-}
-
-.box-title {
-    font-weight: 700;
-    font-size: 15px;
-}
-
-.box-text {
-    font-size: 13px;
-    opacity: 0.85;
-    margin-top: 4px;
-}
-
-.links {
-    margin-top: 30px;
-}
-
-.link-button {
-    display: inline-block;
-    padding: 10px 18px;
-    margin: 5px;
-    border-radius: 30px;
-    background: rgba(255,255,255,0.13);
-    color: white !important;
-    text-decoration: none !important;
-    font-weight: 600;
-    border: 1px solid rgba(255,255,255,0.20);
-    transition: transform 0.25s ease, background 0.25s ease;
-}
-
-.link-button:hover {
-    transform: translateY(-3px);
-    background: rgba(255,255,255,0.25);
+    background: rgba(255, 255, 255, .12);
+    padding: 18px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
 }
 
 .footer {
-    margin-top: 28px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.15);
-    font-size: 13px;
-    opacity: 0.85;
-    line-height: 1.7;
+    margin-top: 25px;
+    font-size: 15px;
+    opacity: .9;
 }
 
-@media (max-width: 600px) {
-
-    .dev-card {
-        margin: 20px 10px;
-        padding: 30px 18px;
-    }
-
-    .name-ar {
-        font-size: 26px;
-    }
-
-    .name-en {
-        font-size: 17px;
-    }
-
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    .project-title {
-        font-size: 19px;
-    }
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
 }
 
 </style>
 
-
 <div class="dev-card">
 
-    <div class="avatar">
-        👩🏻‍💻
-    </div>
+    <div class="avatar">👩🏻‍💻</div>
 
-    <div class="name-ar">
-        مديحة عبدالله عوبل
-    </div>
+    <div class="name-ar">مديحة عبد الله عوبل</div>
+    <div class="name-en">Madiha Abdullah Aobel</div>
+    <div class="title">Founder • Developer • Mathematics Researcher</div>
 
-    <div class="name-en">
-        Madiha Abdullah Aobel
-    </div>
-
-    <div class="title">
-        Founder • Developer • Mathematics Researcher
-    </div>
-
-    <div class="badge">
-        🚀 Creator of MadiNeutro AI
-    </div>
-
-    <div class="project-description">
-
-        <div class="project-title">
-            🤖 MadiNeutro AI
-        </div>
-
-        <div class="project-subtitle">
-            AI-Powered Multi-Criteria Decision Making Platform
-            <br>
-            Based on Neutrosophic Logic & Information Entropy
-        </div>
-
-    </div>
-
-    <div class="tech-container">
-
-        <span class="tech">
-            🧠 Neutrosophic Logic
-        </span>
-
-        <span class="tech">
-            📊 MCDM
-        </span>
-
-        <span class="tech">
-            🔢 Information Entropy
-        </span>
-
-        <span class="tech">
-            🤖 Artificial Intelligence
-        </span>
-
-        <span class="tech">
-            📈 Data Analysis
-        </span>
-
-    </div>
+    <div class="badge">🚀 Creator of MadiNeutro AI</div>
 
     <div class="grid">
-
         <div class="box">
-            <div class="box-icon">🤖</div>
-            <div class="box-title">MadiNeutro AI</div>
-            <div class="box-text">Version 1.0.0</div>
+            🤖<br>
+            <b>MadiNeutro AI</b><br>
+            Version 1.0.0
         </div>
 
         <div class="box">
-            <div class="box-icon">🏛️</div>
-            <div class="box-title">University of Aden</div>
-            <div class="box-text">Faculty of Science</div>
+            🏛️<br>
+            <b>University of Aden</b>
         </div>
 
         <div class="box">
-            <div class="box-icon">🇾🇪</div>
-            <div class="box-title">Yemen</div>
-            <div class="box-text">Republic of Yemen</div>
+            🇾🇪<br>
+            <b>Yemen</b>
         </div>
 
         <div class="box">
-            <div class="box-icon">📅</div>
-            <div class="box-title">August 2026</div>
-            <div class="box-text">Initial Release</div>
+            📅<br>
+            <b>August 2026</b>
         </div>
-
-    </div>
-
-    <div class="links">
-
-        <a
-            class="link-button"
-            href="mailto:madialmassady@gmail.com">
-            📧 Email
-        </a>
-
-        <a
-            class="link-button"
-            href="https://github.com/YOUR_USERNAME"
-            target="_blank">
-            🌐 GitHub
-        </a>
-
-        <a
-            class="link-button"
-            href="https://scholar.google.com/"
-            target="_blank">
-            🎓 Google Scholar
-        </a>
-
-    </div>
-
-    <div class="footer">
-
-        Developed & Designed by
-        <b>Madiha Abdullah Aobel</b>
-
-        <br>
-
-        Mathematics Researcher • AI & Decision Science
-
-        <br><br>
-
-        © 2026 MadiNeutro AI
-        • Version 1.0.0
-
     </div>
 
 </div>
-
 """, unsafe_allow_html=True)
