@@ -920,55 +920,36 @@ else:
 st.caption(
     "Developed for scientific and research applications."
 )
-st.markdown("""
-<style>
+import streamlit.components.v1 as components
 
+card_html = """
+<style>
 .dev-card {
     max-width: 700px;
     margin: auto;
-    margin-top: 40px;
-    padding: 35px;
+    padding: 30px;
     border-radius: 25px;
     background: linear-gradient(135deg, #0f172a, #1e40af, #2563eb);
     color: white;
     box-shadow: 0 12px 35px rgba(0,0,0,.35);
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: system-ui, -apple-system, sans-serif;
 }
-
 .avatar {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     margin: auto;
     background: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 50px;
-    margin-bottom: 18px;
-    box-shadow: 0 4px 15px rgba(0,0,0,.2);
-}
-
-.name-ar {
-    font-size: 26px;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
-.name-en {
-    font-size: 22px;
-    font-weight: 600;
-    opacity: 0.95;
-    margin-bottom: 10px;
-}
-
-.title {
-    font-size: 16px;
-    opacity: .9;
+    font-size: 45px;
     margin-bottom: 15px;
 }
-
+.name-ar { font-size: 24px; font-weight: bold; margin-bottom: 5px; }
+.name-en { font-size: 20px; font-weight: 600; opacity: 0.95; margin-bottom: 10px; }
+.title { font-size: 15px; opacity: 0.9; margin-bottom: 15px; }
 .badge {
     display: inline-block;
     padding: 8px 18px;
@@ -976,69 +957,34 @@ st.markdown("""
     color: #1e40af;
     border-radius: 40px;
     font-weight: bold;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
-
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 12px;
 }
-
 .box {
-    background: rgba(255, 255, 255, .12);
-    padding: 18px;
-    border-radius: 15px;
-    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, .15);
+    padding: 15px;
+    border-radius: 12px;
 }
-
-.footer {
-    margin-top: 25px;
-    font-size: 15px;
-    opacity: .9;
-}
-
-.footer a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-}
-
 </style>
 
 <div class="dev-card">
-
     <div class="avatar">👩🏻‍💻</div>
-
     <div class="name-ar">مديحة عبد الله عوبل</div>
     <div class="name-en">Madiha Abdullah Aobel</div>
     <div class="title">Founder • Developer • Mathematics Researcher</div>
-
     <div class="badge">🚀 Creator of MadiNeutro AI</div>
-
+    
     <div class="grid">
-        <div class="box">
-            🤖<br>
-            <b>MadiNeutro AI</b><br>
-            Version 1.0.0
-        </div>
-
-        <div class="box">
-            🏛️<br>
-            <b>University of Aden</b>
-        </div>
-
-        <div class="box">
-            🇾🇪<br>
-            <b>Yemen</b>
-        </div>
-
-        <div class="box">
-            📅<br>
-            <b>August 2026</b>
-        </div>
+        <div class="box">🤖<br><b>MadiNeutro AI</b><br>v1.0.0</div>
+        <div class="box">🏛️<br><b>University of Aden</b></div>
+        <div class="box">🇾🇪<br><b>Yemen</b></div>
+        <div class="box">📅<br><b>August 2026</b></div>
     </div>
-
 </div>
-""", unsafe_allow_html=True)
+"""
+
+components.html(card_html, height=450)
